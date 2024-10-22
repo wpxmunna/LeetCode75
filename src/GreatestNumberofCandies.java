@@ -12,11 +12,10 @@ public class GreatestNumberofCandies {
     public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> result = new ArrayList<>();
         int max = Arrays.stream(candies).max().getAsInt();
-        for (int i = 0; i < candies.length; i++) {
-            if ((candies[i] + extraCandies)>=max) {
+        for (int candy : candies) {
+            if ((candy + extraCandies) >= max) {
                 result.add(true);
-            }
-            else {
+            } else {
                 result.add(false);
             }
         }
